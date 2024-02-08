@@ -349,30 +349,3 @@ This is a fantastic opportunity for those looking to kickstart their career in w
 module.exports = {
   placeholderJobs,
 };
-
-
-
-const sampleData = [
-  { id: 0, name: 'apple', category: 'fruit', color: 'green' },
-  { id: 1, name: 'pear', category: 'fruit', color: 'green' },
-  { id: 2, name: 'banana', category: 'fruit', color: 'yellow' },
-  { id: 3, name: 'carrot', category: 'vegie', color: 'red' },
-  { id: 4, name: 'strawberry', category: 'berry', color: 'red' }
-];
-
-const newFilterObj = {
-  name: 'ap',
-  category: 'fruit',
-  color: 'green'
-};
-
-const filteredData = sampleData.filter(props =>
-  Object
-    .entries(newFilterObj)
-    .every(([key, val]) =>
-      !val.length ||
-      props[key].toLowerCase().includes(val.toLowerCase())
-    )
-);
-
-console.log(filteredData);
